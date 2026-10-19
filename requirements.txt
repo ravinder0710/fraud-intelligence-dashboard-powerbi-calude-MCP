@@ -1,0 +1,7 @@
+# Core Analytics & Power BI Modeling Prerequisites
+# Recommended Power BI Version: Microsoft Power BI Desktop (Latest 64-bit)
+
+# Optional Python / FastMCP Server Dependencies (for AI-augmented BI modeling)
+fastmcp>=0.1.0
+pandas>=2.0.0
+numpy>=1.24.0

@@ -1,0 +1,18 @@
+# ==============================================================================
+# .gitignore for Fraud Intelligence & Behavioral Risk Dashboard
+# Stack  : Power BI (.pbix), Power Query, DAX, Python MCP
+# Author : Ravinder Gupta (https://github.com/ravinder0710)
+# ==============================================================================
+
+# --- Operating System & Temporary Files ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.temp
+~$*.xlsx
+~$*.docx
+
+# --- IDE Settings ---
+.vscode/
+.idea/
