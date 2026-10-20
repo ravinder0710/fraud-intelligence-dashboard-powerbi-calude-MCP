@@ -62,26 +62,23 @@ Management decision-support layer translating elevated behavioral signals into o
 
 The data architecture combines a fact-style transactional ledger with an optimized in-memory Calendar dimension:
 
-```text
-Highbridge Fraud Dataset (37,901 Transactions)
-                     │
-                     ▼
-[Power Query ETL & Data Profiling]
- • Removed broken corrupted row (TXN100035791)
- • Parsed timestamp into proper DateTime & extracted Transaction Date
- • Converted Boolean flags: is_fraud, is_foreign_transaction, is_new_beneficiary
- • Segmented account_tenure_days into standardized chronological buckets
-                     │
-                     ▼
-[Relational Model in Power BI]
- Calendar (Date Dimension)  1 ───────◄ * FraudTransactions (Fact Ledger)
- [Date]                                  [Transaction Date]
-                     │
-                     ▼
-[AI-Augmented DAX Calculation Layer via Claude FastMCP]
- • Dynamic SWITCH(TRUE()) risk labels
- • Filter-context responsive KPI measures
- • Real-time model validation and schema verification
+```mermaid
+flowchart TD
+    A["Raw Transactional Stream - 37,901 Highbridge Logs ($784M Volume)"] --> B["Power Query ETL & Data Profiling"]
+    B --> C["Relational Star Schema Model"]
+    
+    subgraph StarSchema
+        D["Calendar Dimension - Date, Month, Quarter"]
+        E["FraudTransactions Fact - 37,901 Records ($19M Compromised)"]
+        D -->|"1:N (Transaction Date)"| E
+    end
+
+    C --> StarSchema
+    StarSchema --> F["AI-Augmented DAX Surveillance Engine via FastMCP"]
+    
+    F --> G["Signal 1: Foreign IP (24.8% Fraud Rate, 10.2x Uplift)"]
+    F --> H["Signal 2: 3+ Failed Logins (16.1% Fraud Rate, 6.6x Uplift)"]
+    F --> I["Signal 3: New Beneficiary Transfers (8.7% Fraud Rate, 3.6x Uplift)"]
 ```
 
 ---
@@ -190,8 +187,6 @@ fraud-intelligence-dashboard-powerbi/
 ## 👨‍💼 Author & Contact
 **Ravinder Gupta**  
 *Data Analyst | Business Intelligence & Fraud Risk Specialist*  
-- 📍 **Location:** Alwar, Rajasthan, India  
+- 📍 **Location:** Gurugram (Delhi-NCR), India  
 - 📧 **Email:** [iamravindergupta17@gmail.com](mailto:iamravindergupta17@gmail.com)  
-- 💬 **WhatsApp:** [+91 9982637026](https://wa.me/919982637026?text=Hi%20Ravinder,%20saw%20your%20Fraud%20Intelligence%20portfolio)
-- 💼 **LinkedIn:** [linkedin.com/in/ravinder-gupta-da](https://linkedin.com/in/ravinder-gupta-da)  
 - 🐙 **GitHub:** [github.com/ravinder0710](https://github.com/ravinder0710)
