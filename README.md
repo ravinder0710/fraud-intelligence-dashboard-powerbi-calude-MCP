@@ -155,6 +155,7 @@ fraud-intelligence-dashboard-powerbi/
 ├── highbridge_fraud_detection_dataset_2026.csv                         # Clean transaction dataset (37,901 records, ₦784M volume)
 ├── Fraud_Intelligence_Dashboard_Complete_Project_Report_v3.docx       # In-depth 21-section executive documentation & DAX catalogue
 │
+├── data_architecture_pipeline.png                                     # Star Schema Architecture & FastMCP Surveillance Pipeline
 ├── dashboard_overview_page.png                                         # View 1: Executive KPI overview & channel/tenure diagnostics
 ├── dashboard_descriptions_page.png                                     # View 2: Prioritized P1/P2/P3 risk recommendations
 │
