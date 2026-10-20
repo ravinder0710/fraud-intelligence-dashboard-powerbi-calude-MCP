@@ -170,8 +170,8 @@ fraud-intelligence-dashboard-powerbi/
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/ravinder0710/fraud-intelligence-dashboard-powerbi.git
-   cd fraud-intelligence-dashboard-powerbi
+   git clone https://github.com/ravinder0710/fraud-intelligence-dashboard-powerbi-claude-MCP.git
+   cd fraud-intelligence-dashboard-powerbi-claude-MCP
    ```
 
 2. **Open the Power BI Dashboard:**
